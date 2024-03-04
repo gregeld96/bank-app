@@ -8,6 +8,7 @@ import HomeGroup from "./screens/Home";
 import { EditProfileScreen } from "./screens/Edit/Profile";
 import { TransactionScreen } from "./screens/Main/Transaction";
 import { CreateTransactionScreen } from "./screens/Edit/Transaction";
+import ImagePickerExample from "./screens/Edit/ImagePicker";
 
 
 const Stack = createNativeStackNavigator();
@@ -40,9 +41,17 @@ export default function App() {
                   headerShown: false,
                 }}
               />
-              <Stack.Screen 
+              {/* <Stack.Screen 
                 name="EditProfile" 
                 component={EditProfileScreen} 
+                options={{
+                  headerShown: true,
+                  title: "Edit Profile",
+                }}
+              /> */}
+              <Stack.Screen 
+                name="EditProfile" 
+                component={ImagePickerExample} 
                 options={{
                   headerShown: true,
                   title: "Edit Profile",
